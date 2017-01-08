@@ -1,7 +1,8 @@
 $(document).ready(function () {
     function getUserLocation() {
-        $.get('http://ip-api.com/json', function (locData) {
-            $('.city').text(locData.city + ", " + locData.region + ", " + locData.country);
+        $.getJSON('http://ip-api.com/json', function (locData) {
+            console.writeline("hello" + locData)
+            $('.city').html(locData.city + ", " + locData.region + ", " + locData.country);
         }
         )
     }
